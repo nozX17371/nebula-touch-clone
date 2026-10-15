@@ -33,6 +33,9 @@ jobs:
           yes | sdkmanager --licenses || true
           sdkmanager "platforms;android-29" "build-tools;29.0.3" "platform-tools"
 
+      - name: Create local.properties
+        run: echo "sdk.dir=$HOME/android-sdk" > local.properties
+
       - name: Setup Gradle 7.5
         uses: gradle/actions/setup-gradle@v3
         with:
