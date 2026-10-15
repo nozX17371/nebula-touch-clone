@@ -31,7 +31,7 @@ jobs:
       - name: Accept Licenses & Install Packages
         run: |
           yes | sdkmanager --licenses || true
-          sdkmanager "platforms;android-29" "build-tools;29.0.3" "platform-tools"
+          sdkmanager "platforms;android-33" "build-tools;33.0.2" "platform-tools"
 
       - name: Create local.properties
         run: echo "sdk.dir=$HOME/android-sdk" > local.properties
